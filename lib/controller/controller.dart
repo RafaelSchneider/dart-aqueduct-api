@@ -1,7 +1,6 @@
 import 'package:aqueduct/aqueduct.dart';
-
-import 'lib/model/Person.dart';
-import 'lib/service/PersonService.dart';
+import 'package:aqueduct_api/model/Person.dart';
+import 'package:aqueduct_api/service/PersonService.dart';
 
 class Controller extends ResourceController {
 
