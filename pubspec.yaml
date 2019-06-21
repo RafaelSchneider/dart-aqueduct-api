@@ -1,4 +1,4 @@
-name: aqueduct-pai
+name: aqueduct_api
 description: Api using Aqueduct and some database
 version: 0.0.1
 author: Rafael Schneider <rss.schneider@gmail.com>

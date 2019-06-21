@@ -1,5 +1,5 @@
 
-import 'package:fave_reads/model/Person.dart';
+import 'package:aqueduct_api/model/Person.dart';
 
 class PersonService{
 

@@ -1,4 +1,5 @@
-import 'package:fave_reads/aqueduct_api.dart';
+import 'package:aqueduct_api/channel/aqueduct_api.dart';
+import 'package:aqueduct_api/channel/channel.dart';
 
 Future main() async {
   final app = Application<Channel>()

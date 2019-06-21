@@ -2,7 +2,7 @@
 
 import 'package:aqueduct/aqueduct.dart';
 
-class Person extends Serializable {
+class Person extends Serializable{
   String _name;
   int _age;
 

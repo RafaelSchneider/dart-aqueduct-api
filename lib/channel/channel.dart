@@ -1,12 +1,14 @@
 
 import 'package:aqueduct/aqueduct.dart';
+import 'package:aqueduct_api/service/PersonService.dart';
 
-import 'service/PersonService.dart';
-import 'aqueduct_api.dart';
+import 'package:aqueduct_api/channel/aqueduct_api.dart';
 
 class Channel extends ApplicationChannel {
 
   PersonService service;
+
+  ManagedContext context;
 
   @override
   Controller get entryPoint {
@@ -24,4 +26,11 @@ class Channel extends ApplicationChannel {
     return router;
   }
 
+  @override
+  Future prepare() async {
+    var dataModel = new ManagedDataModel.fromCurrentMirrorSystem();
+    var store = new PostgreSQLPersistentStore.fromConnectionInfo(
+        "postgres", "admin", "localhost", 5432, "dartdb");
+    context = new ManagedContext(dataModel, store);
+  }
 }
